@@ -1,0 +1,216 @@
+/* ---------------------NAVBAR--------------------- */
+.nav {
+    /*Position fixed mantiene fijo el navbar - Y SACA AL FLUJO DEL CONTENEDOR*/
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 10%;
+    z-index: 100;
+    
+}
+.nav-container{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*CREANDO VARIABLES PARA USARLAS EN OTRAS CLASES DE NAV*/
+    --icon-open-menu: url("../img/assets/menu-open.svg");
+    --transform-menu-show: translateX(-100%);
+
+}
+.nav-container:has(.nav-input:checked){
+    --icon-open-menu: url("../img/assets/menu-close.svg");
+    --transform-menu-show: translate(0);
+}
+.nav-figure, .nav-toggle{
+    /*Z INDEX 10 para mostrar el logo y el label encima del navlist*/
+    z-index: 10;
+}
+.nav-toggle{
+    width: 40px;
+    height: 40px;
+    background-image: var(--icon-open-menu);
+    object-fit: contain;
+    /*COVER HACER QUE OCUPE TODO EL CONTENEDOR*/
+    background-size: cover;
+    cursor: pointer;
+    transition: background-image 0.5s;
+}
+.nav-input{
+    display: none;
+}
+
+.nav-logo {
+    /* margin: 0;
+    padding: 0;
+    width: 150px;
+    object-fit: contain; */
+    text-decoration: none;
+    list-style: none; 
+    font-family: "Leckerli One", cursive;
+    font-size: 4rem;
+}
+.nav-list {
+    transform: var(--transform-menu-show);
+    /*POSITION FIXED SACA EL FLUJO DEL CONTENEDOR*/
+    position: fixed;
+    /*INSET 0 OCUPA EL 100% DE LA PANTALLA*/
+    inset: 0;
+    padding: 2rem 5%;
+    display: grid;
+    /*PLACE CONTENT reemplaza a align-items,justify-content(center) en otras palabras centra el contendio tanto vertical como horizontalmente*/
+    place-content: center;
+    gap: 3rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    list-style: none;
+    transition: transform 0.5s;
+    font-family: "Ysabeau SC", sans-serif;
+    
+}
+.nav-link{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+@media (width > 856px) {
+    .nav-container{
+        --transform-menu-show: translate(0);
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .nav-list{
+        font-size: 18px;
+        position: static;
+        grid-auto-flow: column;
+        /*PLACE CONTENT UNSET vuelvo al valor del contenido al original*/
+        place-content: unset;
+        padding: 0;
+        gap: 3rem;
+
+    }
+    
+
+    /*ANIMACION DE HOVERPARA EL UNDERLINE DE CADA ANCOR*/
+    .nav-link {
+        position: relative;
+        text-decoration: none; /* Elimina cualquier subrayado predeterminado */
+    }
+    
+    .nav-link::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: goldenrod;
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Ajusta este valor según sea necesario */
+        transform: scaleX(0);
+        transition: transform 0.4s;
+        box-shadow: 0 0 10px goldenrod;
+    }
+    
+    .nav-link:hover::after {
+        transform: scaleX(1);
+    }
+    /*-------------------------------------------------*/
+}
+
+
+
+.header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header ul li {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+.header ul li:hover {
+    color: brown;
+    transform: scale(1.1);
+}
+
+.header ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding-left: 2.5rem; /* Add left padding */
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(104, 104, 104, 0.788);
+    transition: .2s;
+}
+
+.header ul li a:active {
+    color: goldenrod;
+}
+.logo a img {
+    margin: 0;
+    padding: 0;
+    width: 124px;
+    object-fit: contain;
+}
+
+#nav-responsive{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    margin: auto;
+    display: none;
+}
+
+#nav-responsive i{
+    color: goldenrod;
+    margin: 0 auto;
+    font-size: 24px;
+    text-shadow: 3px 3px 5px black;
+}
+
+#nav-responsive i:hover {
+    color: #fff;
+}
+
+/* Responsividad --------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+    nav#nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none; /* oculto por defecto */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav#nav.show {
+        display: flex; /* cuando tenga la clase show se muestra */
+    }
+
+    #nav-responsive{
+        display: block;
+    }
+
+    nav#nav ul {
+        flex-direction: column;
+    }
+
+    nav#nav ul li a {
+        margin: 1rem 0;
+    }
+}

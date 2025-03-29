@@ -1,0 +1,286 @@
+
+/*BOTON YOUTUBE--------------------------------*/
+.btn-ytb {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(255 0 0);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(255 0 0);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+.btn-ytb span {
+    color: white;
+    margin: 10px;
+}
+
+.btn-ytb::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-ytb:hover {
+    color: #fff;
+    border: 1px solid rgb(255 0 0);
+}
+
+.btn-ytb:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(255 0 0);
+}
+
+/*BOTON LINKEDIN--------------------------------*/
+.btn-linkedin {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(0, 119, 181);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(0, 119, 181);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+.btn-linkedin span {
+    color: white;
+    margin: 10px;
+}
+
+.btn-linkedin::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-linkedin:hover {
+    color: #fff;
+    border: 1px solid rgb(0, 119, 181);
+}
+
+.btn-linkedin:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
+}
+
+/*BOTON GIT HUB--------------------------------*/
+.btn-github {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(140, 39, 255);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(140, 39, 255);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+.btn-github span {
+    color: white;
+    margin: 10px;
+}
+
+.btn-github::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-github:hover {
+    color: #fff;
+    border: 1px solid rgb(36, 41, 46);
+}
+
+.btn-github:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(140, 39, 255);
+}
+
+/* BOTON FACEBOOK--------------------------------- */ 
+.btn-facebook {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(24, 119, 242);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(24, 119, 242);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+}
+
+.btn-facebook span {
+    color: white;
+    margin: 10px;
+}
+
+.btn-facebook::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-facebook:hover {
+    color: #fff;
+    border: 1px solid rgb(24, 119, 242);
+}
+
+.btn-facebook:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(24, 119, 242);
+}
+
+
+
+
+
+/* BOTON CV DESCARGAR------------------ */ 
+.container-btn-cv{
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+}
+.button-cv {
+    --main-focus: #2d8cf0;
+    --font-color: goldenrod;
+    --bg-color-sub: #222;
+    --bg-color: #323232;
+    --main-color: #dedede;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 2px 2px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.button-cv, .button__icon, .button__text {
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.button-cv .button__text {
+    transform: translateX(21px);
+    color: var(--font-color);
+    font-weight: 800;
+}
+
+.button-cv .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-cv .svg {
+    width: 20px;
+    fill: var(--main-color);
+}
+
+.button-cv:hover {
+    background: var(--bg-color);
+}
+
+.button-cv:hover .button__text {
+    color: transparent;
+}
+
+.button-cv:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+}
+
+.button-cv:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+}
+
