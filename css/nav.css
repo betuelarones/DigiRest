@@ -3,13 +3,13 @@
     /*Position fixed mantiene fijo el navbar - Y SACA AL FLUJO DEL CONTENEDOR*/
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 4rem 5%;
+    background-color: rgba(0, 0, 0, 0.6 );
+    padding: 3rem 5%;
     z-index: 100;
     
 }
 .nav-container{
-    max-width: 1600px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -70,13 +70,26 @@
     font-size: 18px;
 }
 .nav-link{
-    font-weight: 700;
+    font-weight: 350;
     color: white;
     text-decoration: none;
     transition: 0.5s;
 }
+.nav-btn{
+    background-color: #FAC122;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 350;
+    transition: background-color 0.1s ;
+    &:hover{
+        background-color: #b88d17;
+        color: white;
+    }
+}
 
-@media (width > 985px) {
+@media (width > 1100px) {
     /*DESDE 950px EN ADELANTE*/
     .nav-container{
         --transform-menu-show: translate(0);
@@ -85,13 +98,13 @@
         display: none;
     }
     .nav-list{
-        font-size: 20px;
+        font-size: 18px;
         position: static;
         grid-auto-flow: column;
         /*PLACE CONTENT UNSET vuelvo al valor del contenido al original*/
         place-content: unset;
         padding: 0;
-        gap: 5rem;
+        gap: 8rem;
 
     }
     
@@ -107,13 +120,13 @@
         display: inline-block;
         width: 100%;
         height: 3px;
-        background-color: goldenrod;
+        background-color: #FAC122;
         position: absolute;
         left: 0;
         bottom: -5px; /* Ajusta este valor según sea necesario */
         transform: scaleX(0);
-        transition: transform 0.4s;
-        box-shadow: 0 0 10px goldenrod;
+        transition: transform 0.2s;
+        box-shadow: 0 0 10px #FAC122;
     }
     
     .nav-link:hover::after {
@@ -127,15 +140,15 @@
         }
     }
     .nav-btn{
-        background-color: goldenrod;
+        background-color: #FAC122;
         color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
+        padding: 1rem 2rem;
+        border-radius: 20px;
         text-decoration: none;
-        font-weight: 700;
-        transition: background-color 0.2s ;
+        font-weight: 350;
+        transition: background-color 0.1s ;
         &:hover{
-            background-color: rgb(125, 94, 13);
+            background-color: #b88d17;
             color: white;
         }
     }

@@ -34,16 +34,10 @@ html {
 }
 
 span {
-    color: goldenrod;
+    color: #FAC122;
 }
 
 /* ---------------------------------------------- */
-section {
-    max-width: 1700px;
-    margin: 0 auto;
-    min-height: 100vh;
-    padding: 2.5rem 10%;
-}
 
 
 
