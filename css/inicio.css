@@ -1,0 +1,136 @@
+.section-inicio {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../img/inicio.png");
+    background-repeat: no-repeat;
+    /* BACKGROUND SIZE COVER MODIFICA EL TAMAÑO OCUPANDO LO NECESARIO*/
+    background-size: cover;
+    background-position: center center ;
+    /* BACKGROUND ATTACHMENT FIXED hace que el fondo no se mueva al hacer scroll
+    background-attachment: fixed;*/
+    padding: auto;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease;
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.texto-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    max-width: 700px;
+    gap: 3rem;
+    color: #fff;
+    text-align: center;
+}
+.h1{
+    font-size: clamp(60px, 7vw, 10rem);
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 600;
+    display: block;/* 
+    border-right: 4px solid #ffffff;
+    width: 22ch;
+    white-space: nowrap;
+    animation: typing 3s steps(22),
+    cursor 0.5s step-end infinite alternate;
+    overflow: hidden; */
+}
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+.h3{
+    font-size: clamp(35px, 4vw, 5rem);
+    font-family: "Leckerli One", cursive;
+    font-weight: 450;
+}
+.inicio-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-out;
+}
+
+.btn{
+    letter-spacing: 1px;
+    background-color: #FAC122;
+    color: #000;
+    padding: 3rem 4rem 2.5rem 4rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 22px;
+    transition: 0.3s;
+    border: solid 2px transparent;
+    &:hover{
+        cursor: pointer;
+        background-color:transparent;
+        color: white;
+        border: solid 2px rgb(250, 193, 34);
+        box-shadow: 0 0 10px rgb(250, 193, 34), 0 0 20px rgb(250, 193, 34), 0 0 30px rgb(250, 193, 34);
+        
+    }
+}
+
+
+
+.panel-main {
+    flex: 1 1 100%;
+    padding: 2rem 7%;
+    /* aquí puedes poner tu fondo de pizza, etc. */
+}
+.panel-form {
+    flex: 0 1 0;
+    background: transparent;
+    color: #000000;
+    
+}
+.panel-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    gap: 5rem;
+    padding: 5rem;
+    font-size: 3rem;
+    border-radius: 10px;
+}
+.panel-form form {
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+  /* Estado “open”: cada panel ocupa la mitad */
+.wrapper.open .panel-main {
+    flex: 1 1 50%;
+}
+.wrapper.open .panel-form {
+    flex: 1 1 50%;
+}
+

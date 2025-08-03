@@ -13,28 +13,47 @@ html {
     font-size: 50%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../img/fondo3.png");
-    /* BACKGROUNDSIZE COVER MODIFICA EL TAMAÑO OCUPANDO LO NECESARIO*/
-    background-size: cover;
-    background-position: center center ;
-    height: 100vh;    
     
 }
 
 
-/*H2*/
-.titulo-content {
-    color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 4rem;
-    margin-bottom: 2rem;
-
+body {
+    --sb-track-color: #000000;
+    --sb-thumb-color: #fac122;
+    --sb-size: 10px;
+    
 }
 
-span {
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+    border: 2px solid #000000;
+    
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color)
+                        var(--sb-track-color);
+    }
+}
+
+.span1 {
     color: #FAC122;
+}
+
+.span2 {
+    color: #dd3744;
+    /* color: brown; */
 }
 
 /* ---------------------------------------------- */

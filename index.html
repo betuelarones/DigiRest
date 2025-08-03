@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio personal de Ronaldo Meza, mostrando habilidades, proyectos y servicios.">
-    
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./img/LOGO-WIN.png" width="80" height="50" type="image/x-icon">
+    <meta name="description"
+        content="Restaurante DigiRest, donde la comida se convierte en una experiencia inolvidable.">
+
     <title>DigiRest</title>
+
+    <!-- Favicon ICONO RESTAURANT-->
+    <link rel="icon" href="./img/log.png" type="image/x-icon">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/productos.css">
+
+    <!-- Íconos MENÚ - CLOSE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <!-- FONT DIGIREST--------------->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Leckerli+One&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./css/nav.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100..900&family=Leckerli+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <nav class="nav">
@@ -29,27 +41,138 @@
                 <img class="nav-logo" src="./img/LOGO-NAV.png" alt="Logo-RNK">
             </figure> -->
             <ul>
-                <li class="nav-logo"><a class="nav-link" href="" target="_self">Digi<span>Rest</span></a></li>
+                <li class="nav-logo"><a  href="" target="_self">Digi<span class="span1">Rest</span></a></li>
             </ul>
-            
+
             <label class="nav-toggle" for="menu-input">
                 <input class="nav-input" type="checkbox" id="menu-input">
             </label>
 
             <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="#inicio">RESERVAS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">PROMOCIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-inicio">RESERVAS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-cards">PROMOCIONES</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portafolio">PEDIDOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicios">MENÚ</a></li>
-                <li class="nav-btn-container"><a class="nav-btn" href="#contacto">INICIAR SESION</a></li>
+                <li class="nav-btn-container"><a class="nav-btn" href="">INICIAR SESIÓN</a></li>
             </ul>
         </div>
     </nav>
 
 
     <!-- CUERPO--------------->
-    
+    <main>
+        <section class="section-inicio" id="section-inicio">
 
+            <div class="wrapper" id="wrapper">
+
+                <section class="panel panel-main">
+                    <div class="texto-container">
+                        <span class="span1">
+                            <h3 class="h3">Nosotros tenemos mucho más</h3>
+                        </span>
+                        <h1 class="h1">¡MÁS QUE SÓLO PIZZA Y PASTA!</h1>
+                    </div>
+                    <div class="inicio-btn-container">
+                        <a id="btn-toggle" class="btn">RESERVAR EN LINEA</a>
+                    </div>
+                </section>
+
+                <section class="panel panel-form">
+                    <div>
+                        <h2>Formulario de Reserva</h2>
+                        <form>
+                            <label>
+                                Nombre:
+                                <input type="text" name="nombre" required>
+                            </label>
+                            <label>
+                                Celular:
+                                <input type="text" name="nombre" required>
+                            </label>
+                            <label>
+                                E-mail:
+                                <input type="email" name="email" required>
+                            </label>
+
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <section class="section-cards" id="section-cards">
+            <div class="cards-container">
+                <h2 class="h2">¡BIENVENIDOS A DIGIREST!</h1>
+                    <span class="span2">
+                        <h3 class="h3">La mejor experiencia gastronómica</h3>
+                    </span>
+                    
+                    <div class="div-cards">
+                        <div class="card">
+                            <img class="img" src="./img/card1.png" alt="Reservaciones en linea">
+                            <div class="text-container">
+                                <h3>Reservaciones en linea</h3>
+                                <p>Realiza tus reservas de manera sencilla y rápida.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="img" src="./img/card2.png" alt="Exploración de platillos">
+                            <div class="text-container">
+                                <h3>Exploración de platillos</h3>
+                                <p>Descubre un menú variado y delicioso.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="img" src="./img/card3.png" alt="Solicitar delivery">
+                            <div class="text-container">
+                                <h3>Solicitar delivery</h3>
+                                <p>Recibe tus platillos favoritos en la puerta de tu casa.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+        </section>
+
+        <div class="div-container-productos">
+            <a href="" >
+                <div class="producto-box">
+                    <img src="./img/entradas.png" alt="Entradas">
+                    <h3 class="h3">Entradas</h3>
+                </div>
+            </a>
+            <!-- <a href="">
+                <div class="producto-box">
+                    <img src="./img/fondo2.png" alt="Menús">
+                    <h3 class="h3">Menús</h3>
+                </div>
+            </a> -->
+            <a href="">
+                <div class="producto-box">
+                    <img src="./img/bebidas.png" alt="Bebidas">
+                    <h3 class="h3">Bebidas</h3>
+                </div>
+            </a>
+            <a href="">
+                <div class="producto-box">
+                    <img src="./img/postres.png" alt="Postres">
+                    <h3 class="h3">Postres</h3>
+                </div>
+            </a>
+        </div>
+
+
+
+    </main>
+    <script src="./js/index.js"></script>
 </body>
-    
+
 </html>

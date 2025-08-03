@@ -3,9 +3,10 @@
     /*Position fixed mantiene fijo el navbar - Y SACA AL FLUJO DEL CONTENEDOR*/
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6 );
-    padding: 3rem 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2.5rem 7% 2rem 7%;
     z-index: 100;
+    font-family: "Yanone Kaffeesatz", sans-serif;
     
 }
 .nav-container{
@@ -47,10 +48,13 @@
     padding: 0;
     width: 150px;
     object-fit: contain; */
-    text-decoration: none;
-    list-style: none; 
+    list-style: none;
     font-family: "Leckerli One", cursive;
-    font-size: 5rem;
+    font-size: clamp(30px, 3vw, 5.5rem);
+}
+.nav-logo a {
+    color: #ffffff;
+    text-decoration: none;
 }
 .nav-list {
     transform: var(--transform-menu-show);
@@ -61,13 +65,11 @@
     display: grid;
     /*PLACE CONTENT reemplaza a align-items,justify-content(center) en otras palabras centra el contendio tanto vertical como horizontalmente*/
     place-content: center;
-    gap: 2rem;
+    gap: 3rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     list-style: none;
-    transition: transform 0.5s;
-    font-family: "Ysabeau SC", sans-serif;
-    font-size: 18px;
+    font-size: 25px;
 }
 .nav-link{
     font-weight: 350;
@@ -75,21 +77,23 @@
     text-decoration: none;
     transition: 0.5s;
 }
+
 .nav-btn{
     background-color: #FAC122;
-    color: white;
-    padding: 1rem 2rem;
+    color: rgb(0, 0, 0);
+    padding: 1.5rem 3rem 1rem;
     border-radius: 20px;
     text-decoration: none;
-    font-weight: 350;
-    transition: background-color 0.1s ;
+    font-weight: 500;
+    transition: 0.3s;
     &:hover{
-        background-color: #b88d17;
-        color: white;
+        box-shadow: 0 0 10px rgb(250, 193, 34), 0 0 20px rgb(250, 193, 34), 0 0 30px rgb(250, 193, 34);
+        color: rgb(255, 255, 255);
+        background-color: transparent;
     }
 }
 
-@media (width > 1100px) {
+@media (width > 1000px) {
     /*DESDE 950px EN ADELANTE*/
     .nav-container{
         --transform-menu-show: translate(0);
@@ -98,25 +102,24 @@
         display: none;
     }
     .nav-list{
-        font-size: 18px;
+        font-size: 20px;
         position: static;
         grid-auto-flow: column;
         /*PLACE CONTENT UNSET vuelvo al valor del contenido al original*/
         place-content: unset;
         padding: 0;
-        gap: 8rem;
+        gap: 7rem;
 
     }
-    
-
     /*ANIMACION DE HOVERPARA EL UNDERLINE DE CADA ANCOR*/
     .nav-link {
-        position: relative;
+        letter-spacing: 1px;
+        position: relative; 
         text-decoration: none; /* Elimina cualquier subrayado predeterminado */
     }
     
     .nav-link::after {
-        content: "";
+        content: ""; /* Necesario */
         display: inline-block;
         width: 100%;
         height: 3px;
@@ -125,7 +128,7 @@
         left: 0;
         bottom: -5px; /* Ajusta este valor según sea necesario */
         transform: scaleX(0);
-        transition: transform 0.2s;
+        transition: transform 0.4s;
         box-shadow: 0 0 10px #FAC122;
     }
     
@@ -133,23 +136,27 @@
         transform: scaleX(1);
     }
 
-    .nav-btn-container{
-        transition: 0.2s;
+    /* .nav-btn-container{
+        transition: .2s;
         &:hover{
             transform: scale(1.05);
         }
-    }
+    } */
     .nav-btn{
+        letter-spacing: 0.5px;
         background-color: #FAC122;
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 20px;
+        color: rgb(0, 0, 0);
+        padding: 2rem 3rem 1.5rem 3rem;
+        border-radius: 22px;
         text-decoration: none;
-        font-weight: 350;
-        transition: background-color 0.1s ;
+        font-weight: 750;
+        transition: 0.3s;
+        border: solid 2px transparent;
         &:hover{
-            background-color: #b88d17;
+            background-color: transparent;
             color: white;
+            border: solid 2px rgb(250, 193, 34);
+            box-shadow: 0 0 10px rgb(250, 193, 34), 0 0 20px rgb(250, 193, 34), 0 0 30px rgb(250, 193, 34);
         }
     }
     /*-------------------------------------------------*/
